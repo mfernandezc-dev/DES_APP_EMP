@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Registrar Producto{% endblock %}
+
+{% block content %}
+
+<h2>Registrar Nuevo Producto</h2>
+
+<p>
+    Complete los siguientes datos para agregar un producto al inventario.
+</p>
+
+<form method="post">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit" class="button">
+        Guardar Producto
+    </button>
+
+    <a href="{% url 'inventory:product_list' %}">
+        Cancelar
+    </a>
+</form>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}Inventario de Productos{% endblock %}
+
+{% block content %}
+
+<h2>Inventario de la Tienda</h2>
+
+<p>
+    Listado general de productos disponibles actualmente en la tienda.
+</p>
+
+<a href="{% url 'inventory:product_create' %}" class="button">
+    + Registrar Nuevo Producto
+</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Precio (S/)</th>
+            <th>Stock</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        {% for producto in productos %}
+
+        <tr>
+            <td>{{ producto.id }}</td>
+            <td>{{ producto.nombre }}</td>
+            <td>{{ producto.categoria }}</td>
+            <td>S/ {{ producto.precio|floatformat:2 }}</td>
+            <td>{{ producto.stock }}</td>
+        </tr>
+
+        {% empty %}
+
+        <tr>
+            <td colspan="5">
+                No hay productos registrados en el inventario.
+            </td>
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock %}
