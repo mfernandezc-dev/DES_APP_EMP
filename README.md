@@ -57,3 +57,32 @@ Esta App contiene:
 Request → URL → View → Model → Template → Response
 
 La aplicación inventory funciona dentro del mismo Project junto con landing, compartiendo la configuración principal definida en Sesion1.
+
+## Capturas de funcionamiento
+
+### 1. Listado de productos
+
+Vista principal donde se muestra el inventario disponible de la tienda, incluyendo nombre del producto, categoría, precio y stock.
+
+<img src="capturas/01_listado_inventario.png" alt="Listado de productos" width="700">
+
+
+### 2. Formulario de registro de producto
+
+Formulario utilizado para ingresar un nuevo producto al inventario mediante los campos nombre, categoría, precio y cantidad en stock.
+
+<img src="capturas/02_formulario_registro.png" alt="Formulario de registro de producto" width="700">
+
+
+### 3. Producto registrado correctamente
+
+Después de enviar el formulario, el sistema procesa la información y muestra nuevamente el listado con el nuevo producto agregado al inventario.
+
+<img src="capturas/03_producto_registrado.png" alt="Producto registrado en inventario" width="700">
+
+
+### 4. Validación de datos del formulario
+
+El sistema valida los datos ingresados. En este caso, no permite registrar precios menores al valor mínimo establecido.
+
+<img src="capturas/04_validacion_precio.png" alt="Validación del formulario" width="700">
